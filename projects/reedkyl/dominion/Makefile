@@ -45,17 +45,17 @@ fulldeck: deck.c dominion.o rngs.o
 supplycount: supplycount.c dominion.o rngs.o
 	gcc -o supplycount -g supplycount.c dominion.o rngs.o $(CFLAGS)
 
-smithy: smithy.c dominion.o rngs.o
-	gcc -o smithy -g smithy.c dominion.o rngs.o $(CFLAGS)
+cardtest1: cardtest1.c dominion.o rngs.o
+	gcc -o smithy -g cardtest1.c dominion.o rngs.o $(CFLAGS)
 
-adventurer: adventurer.c dominion.o rngs.o
-	gcc -o adventurer -g adventurer.c dominion.o rngs.o $(CFLAGS)
+cardtest2: cardtest2.c dominion.o rngs.o
+	gcc -o adventurer -g cardtest2.c dominion.o rngs.o $(CFLAGS)
 
-village: village.c dominion.o rngs.o
-	gcc -o village -g village.c dominion.o rngs.o $(CFLAGS)
+cardtest3: cardtest3.c dominion.o rngs.o
+	gcc -o village -g cardtest3.c dominion.o rngs.o $(CFLAGS)
 
-councilroom: councilroom.c dominion.o rngs.o
-	gcc -o councilroom -g councilroom.c dominion.o rngs.o $(CFLAGS)
+cardtest4: cardtest4.c dominion.o rngs.o
+	gcc -o councilroom -g cardtest4.c dominion.o rngs.o $(CFLAGS)
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 

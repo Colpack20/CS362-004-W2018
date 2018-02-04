@@ -78,7 +78,7 @@ int main() {
 				}
 				//printf("total is %d\n", total);
 				
-				//printf("cardeffect %d \n", cardEffect(adventurer, -1, -1, -1, &G, 0, bonus));//play smithy from index 0 of hand
+				int y = printf("cardeffect %d \n", cardEffect(adventurer, -1, -1, -1, &G, 0, bonus));//play smithy from index 0 of hand
 				//playcard(smithy, -1, -1, -1, &G, 0);
 				//printf("new deck count is %d\n", G.deckCount[1]); //is this only counting the cards in the deck or discard pile and not in the hand?				
 				int newtotal = 0;
@@ -144,7 +144,7 @@ printf("test 2 add adventurer to index 0 and use card effect of adventurer for p
 				}
 				//printf("total is %d\n", total);
 				
-				//printf("cardeffect %d \n", cardEffect(adventurer, -1, -1, -1, &G, 0, bonus));//play smithy from index 0 of hand
+				int z = cardEffect(adventurer, -1, -1, -1, &G, 0, bonus);//play smithy from index 0 of hand
 				//playcard(smithy, -1, -1, -1, &G, 0);
 				//printf("new deck count is %d\n", G.deckCount[0]); //is this only counting the cards in the deck or discard pile and not in the hand?				
 				newtotal = 0;

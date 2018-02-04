@@ -48,7 +48,7 @@ int main() {
 
                 //printf("Test player %d with %d treasure card(s).\n", p, handCount);
 
-	printf("test 1 on player 1 after initialize game is run\n");
+	printf("test 1 on player 1 for number of duchy cards after initialize game is run\n");
                 memset(&G, 23, sizeof(struct gameState));   // clear the game state
                 r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
                 //G.handCount = handCount;                 // set the number of cards on hand
@@ -61,29 +61,29 @@ int main() {
 				//printf("count is %d\n", fullDeckCount(0, copper, &G));
 				int h, total;
 				total = 0;
-				for (h = 0; h < 27; h++){
+				//for (h = 0; h < 27; h++){
 					//printf("card %d is %d\n", h, fullDeckCount(0, h, &G));
-					total += fullDeckCount(0, h, &G);
-				}
-				printf("total is %d\n", total);
-				printf("deck count is %d\n", G.deckCount[0]);
-				if(total == G.deckCount[0])
-					printf("passed, the actual total deck count is the same as the deckcount attribute of player 1\n");
+					total = fullDeckCount(0, 2, &G);
+				//}
+				//printf("total is %d\n", total);
+				//printf("deck count is %d\n", G.deckCount[0]);
+				if(total == 0)
+					printf("passed, player 1 has no duchy cards\n");
 				else
-					printf("failed, the actual total deck count is not the same as the deckcount attribute of player 1\n");
-	printf("test 2 on player 2 after initialize game is run\n");
+					printf("failed, player 1 has duchy cards\n");
 				//int h, total;
+	printf("test 2 on player 2 for deck count and full deck count totals after initialize game is run, which should be the same\n");
 				total = 0;
 				for (h = 0; h < 27; h++){
 					//printf("card %d is %d\n", h, fullDeckCount(1, h, &G));
 					total += fullDeckCount(1, h, &G);
 				}
-				printf("total is %d\n", total);
-				printf("deck count is %d\n", G.deckCount[1]);
+				//printf("total is %d\n", total);
+				//printf("deck count is %d\n", G.deckCount[1]);
 				if(total == G.deckCount[1])
-					printf("passed, the actual total deck count is the same as the deckcount attribute of player 2\n");
+					printf("passed, player 2 hasn't drawn any cards into their hand or discarded any cards, so the full deck count is the same as the deckcount attribute of player 2\n");
 				else
-					printf("failed, the actual total deck count is not the same as the deckcount attribute of player 2\n");
+					printf("failed, player 2 hasn't drawn any cards into their hand or discarded any cards, but the full deck count is not the same as the deckcount attribute of player 2\n");
 	printf("test 3 on player 2 after initialize game is run for number of coppers\n");
 				int coppertotal = fullDeckCount(1, copper, &G);
 				if(coppertotal == 7)

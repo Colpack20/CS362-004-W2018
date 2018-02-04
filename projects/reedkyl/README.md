@@ -5,9 +5,6 @@ testUpdateCoins: testUpdateCoins.c dominion.o rngs.o<br/>
 In order the unit tests are: getCost(), isGameOver(), fullDeckCount(), and supplyCount() <br/>
 In order the card tests are: smithy, adventurer, village, and council room<br/><br/>
 
-Compile all: <br/>
+Compile and run all tests: <br/>
 make unittestresults.out<br/>
-
-Run all:<br/>
-./unittestresults.out<br/>
 

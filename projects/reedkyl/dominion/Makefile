@@ -32,6 +32,24 @@ runtests: testDrawCard
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
+	
+getcost: getcost.c dominion.o rngs.o
+	gcc -o getcost -g  getcost.c dominion.o rngs.o $(CFLAGS)
+
+isgameover: isGameOver.c dominion.o rngs.o
+	gcc -o isgameover -g isGameOver.c dominion.o rngs.o $(CFLAGS)
+
+fulldeck: deck.c dominion.o rngs.o
+	gcc -o fulldeck -g deck.c dominion.o rngs.o $(CFLAGS)
+
+scorefor: scorefor.c dominion.c rngs.o
+	gcc -o scorefor -g scorefor.c dominion.o rngs.o $(CFLAGS)
+
+supplycount: supplycount.c dominion.c rngs.o
+	gcc -o supplycount -g supplycount.c dominion.o rngs.o $(CFLAGS)
+
+smithy: smithy.c dominion.c rngs.o
+	gcc -o smithy -g smithy.c dominion.o rngs.o $(CFLAGS)
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 

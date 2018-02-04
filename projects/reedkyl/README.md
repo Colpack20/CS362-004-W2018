@@ -5,14 +5,24 @@ testUpdateCoins: testUpdateCoins.c dominion.o rngs.o<br/>
 These test the functions that their titles describe: getCost(), supplyCount(), fullDeckCount(), and isGameOver()<br/><br/>
 
 Compile:<br/>
-make getcost<br/>
-make supplycount<br/>
-make fulldeck<br/>
-make isgameover<br/>
+make unittest1<br/>
+make unittest2<br/>
+make unittest3<br/>
+make unittest4<br/>
+
+make cardtest1<br/>
+make cardtest2<br/>
+make cardtest3<br/>
+make cardtest4<br/>
 
 Run:<br/>
-./getcost <br/>
-./supplycount<br/>
-./fulldeck<br/>
-./isgameover<br/>
+./unittest1 <br/>
+./unittest2<br/>
+./unittest3<br/>
+./unittest4<br/>
+
+./cardtest1 <br/>
+./cardtest2<br/>
+./cardtest3<br/>
+./cardtest4<br/>
 

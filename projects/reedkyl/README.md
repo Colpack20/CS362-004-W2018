@@ -1,6 +1,6 @@
-Compile unittests with makefile:<br/>
+Compile unittests with makefile:<br/><br/>
 These tests all follow this template with testUpdateCoins replaced with each function's corresponding name. <br/>
-testUpdateCoins: testUpdateCoins.c dominion.o rngs.o<br/>
+testUpdateCoins: testUpdateCoins.c dominion.o rngs.o<br/><br/>
       gcc -o testUpdateCoins -g  testUpdateCoins.c dominion.o rngs.o $(CFLAGS)<br/>
 These test the functions that their titles describe: getCost(), supplyCount(), fullDeckCount(), and isGameOver()<br/><br/>
 

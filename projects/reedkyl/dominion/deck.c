@@ -42,19 +42,12 @@ int main() {
     }
 
     printf ("TESTING fullDeckCount():\n");
-	
-	
-	//for (p = 0; p < numPlayer; p++)
-    //{
-      //  for (handCount = 1; handCount <= maxHandCount; handCount++)
-        //{
-            //for (bonus = 0; bonus <= maxBonus; bonus++)
-            //{
+
 				numPlayer = 2;
 				//handCount = 5;
-#if (NOISY_TEST == 1)
+
                 //printf("Test player %d with %d treasure card(s).\n", p, handCount);
-#endif*/
+
 	printf("test 1 on player 1 after initialize game is run\n");
                 memset(&G, 23, sizeof(struct gameState));   // clear the game state
                 r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
@@ -75,9 +68,9 @@ int main() {
 				printf("total is %d\n", total);
 				printf("deck count is %d\n", G.deckCount[0]);
 				if(total == G.deckCount[0])
-					printf("passed\n");
+					printf("passed, the actual total deck count is the same as the deckcount attribute of player 1\n");
 				else
-					printf("failed\n");
+					printf("failed, the actual total deck count is not the same as the deckcount attribute of player 1\n");
 	printf("test 2 on player 2 after initialize game is run\n");
 				//int h, total;
 				total = 0;
@@ -88,9 +81,9 @@ int main() {
 				printf("total is %d\n", total);
 				printf("deck count is %d\n", G.deckCount[1]);
 				if(total == G.deckCount[1])
-					printf("passed\n");
+					printf("passed, the actual total deck count is the same as the deckcount attribute of player 2\n");
 				else
-					printf("failed\n");
+					printf("failed, the actual total deck count is not the same as the deckcount attribute of player 2\n");
 	printf("test 3 on player 2 after initialize game is run for number of coppers\n");
 				int coppertotal = fullDeckCount(1, copper, &G);
 				if(coppertotal == 7)
@@ -103,31 +96,6 @@ int main() {
 					printf("passed, there are 3 estates total\n");
 				else
 					printf("failed, there aren't 3 estates total\n");			
-	
-
-				
-/*
-#if (NOISY_TEST == 1)
-                printf("G.coins = %d, expected = %d\n", G.coins, handCount * 1 + bonus);
-#endif
-                assert(G.coins == handCount * 1 + bonus); // check if the number of coins is correct
-
-                memcpy(G.hand[p], silvers, sizeof(int) * handCount); // set all the cards to silver
-                updateCoins(p, &G, bonus);
-#if (NOISY_TEST == 1)
-                printf("G.coins = %d, expected = %d\n", G.coins, handCount * 2 + bonus);
-#endif
-                assert(G.coins == handCount * 2 + bonus); // check if the number of coins is correct
-
-                memcpy(G.hand[p], golds, sizeof(int) * handCount); // set all the cards to gold
-                updateCoins(p, &G, bonus);
-#if (NOISY_TEST == 1)
-                printf("G.coins = %d, expected = %d\n", G.coins, handCount * 3 + bonus);
-#endif
-                assert(G.coins == handCount * 3 + bonus); // check if the number of coins is correct*/
-            //}
-        //}
-    //}
 
     printf("All tests taken!\n");
 

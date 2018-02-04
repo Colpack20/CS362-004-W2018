@@ -42,11 +42,20 @@ isgameover: isGameOver.c dominion.o rngs.o
 fulldeck: deck.c dominion.o rngs.o
 	gcc -o fulldeck -g deck.c dominion.o rngs.o $(CFLAGS)
 
-supplycount: supplycount.c dominion.c rngs.o
+supplycount: supplycount.c dominion.o rngs.o
 	gcc -o supplycount -g supplycount.c dominion.o rngs.o $(CFLAGS)
 
-smithy: smithy.c dominion.c rngs.o
+smithy: smithy.c dominion.o rngs.o
 	gcc -o smithy -g smithy.c dominion.o rngs.o $(CFLAGS)
+
+adventurer: adventurer.c dominion.o rngs.o
+	gcc -o adventurer -g adventurer.c dominion.o rngs.o $(CFLAGS)
+
+village: village.c dominion.o rngs.o
+	gcc -o village -g village.c dominion.o rngs.o $(CFLAGS)
+
+councilroom: councilroom.c dominion.o rngs.o
+	gcc -o councilroom -g councilroom.c dominion.o rngs.o $(CFLAGS)
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 

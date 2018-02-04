@@ -27,3 +27,9 @@ Run:<br/>
 ./cardtest3<br/>
 ./cardtest4<br/>
 
+Compile all: <br/>
+make unittestresults.out<br/>
+
+Run all:<br/>
+./unittestresults.out<br/>
+

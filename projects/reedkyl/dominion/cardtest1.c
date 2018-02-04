@@ -129,7 +129,7 @@ printf("test 2 add smithy to index 2 (hand position 3) and use card effect of sm
 				}
 				//printf("total is %d\n", total);
 				
-				//printf("cardeffect %d \n", cardEffect(smithy, -1, -1, -1, &G, 2, bonus));//play smithy from index 0 of hand
+				int z = cardEffect(smithy, -1, -1, -1, &G, 2, bonus);//play smithy from index 0 of hand
 				//playcard(smithy, -1, -1, -1, &G, 0);
 				//printf("new deck count is %d\n", G.deckCount[1]); //is this only counting the cards in the deck or discard pile and not in the hand?				
 				newtotal = 0;

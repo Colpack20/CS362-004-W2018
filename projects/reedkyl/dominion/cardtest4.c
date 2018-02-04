@@ -141,7 +141,7 @@ int main() {
 				}
 				//printf("total is %d\n", total);
 				
-				//printf("cardeffect %d \n", cardEffect(council_room, -1, -1, -1, &G, 5, bonus));//play smithy from index 0 of hand
+				int z = cardEffect(council_room, -1, -1, -1, &G, 5, bonus);//play smithy from index 0 of hand
 				//playcard(smithy, -1, -1, -1, &G, 0);
 				//printf("new buys %d \n", G.numBuys);
 				//printf("new deck count is %d\n", G.deckCount[0]); //is this only counting the cards in the deck or discard pile and not in the hand?				

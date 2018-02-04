@@ -33,29 +33,29 @@ runtests: testDrawCard
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 	
-getcost: getcost.c dominion.o rngs.o
-	gcc -o getcost -g  getcost.c dominion.o rngs.o $(CFLAGS)
+unittest1: unittest1.c dominion.o rngs.o
+	gcc -o unittest1 -g  unittest1.c dominion.o rngs.o $(CFLAGS)
 
-isgameover: isGameOver.c dominion.o rngs.o
-	gcc -o isgameover -g isGameOver.c dominion.o rngs.o $(CFLAGS)
+unittest2: unittest2.c dominion.o rngs.o
+	gcc -o unittest2 -g unittest2.c dominion.o rngs.o $(CFLAGS)
 
-fulldeck: deck.c dominion.o rngs.o
-	gcc -o fulldeck -g deck.c dominion.o rngs.o $(CFLAGS)
+unittest3: unittest3.c dominion.o rngs.o
+	gcc -o unittest3 -g unittest3.c dominion.o rngs.o $(CFLAGS)
 
-supplycount: supplycount.c dominion.o rngs.o
-	gcc -o supplycount -g supplycount.c dominion.o rngs.o $(CFLAGS)
+unittest4: unittest4.c dominion.o rngs.o
+	gcc -o unittest4 -g unittest4.c dominion.o rngs.o $(CFLAGS)
 
 cardtest1: cardtest1.c dominion.o rngs.o
-	gcc -o smithy -g cardtest1.c dominion.o rngs.o $(CFLAGS)
+	gcc -o cardtest1 -g cardtest1.c dominion.o rngs.o $(CFLAGS)
 
 cardtest2: cardtest2.c dominion.o rngs.o
-	gcc -o adventurer -g cardtest2.c dominion.o rngs.o $(CFLAGS)
+	gcc -o cardtest2 -g cardtest2.c dominion.o rngs.o $(CFLAGS)
 
 cardtest3: cardtest3.c dominion.o rngs.o
-	gcc -o village -g cardtest3.c dominion.o rngs.o $(CFLAGS)
+	gcc -o cardtest3 -g cardtest3.c dominion.o rngs.o $(CFLAGS)
 
-cardtest4: cardtest4.c dominion.o rngs.o
-	gcc -o councilroom -g cardtest4.c dominion.o rngs.o $(CFLAGS)
+cardtest4: cardtest3.c dominion.o rngs.o
+	gcc -o cardtest3 -g cardtest3.c dominion.o rngs.o $(CFLAGS)
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 

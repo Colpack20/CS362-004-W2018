@@ -42,9 +42,6 @@ isgameover: isGameOver.c dominion.o rngs.o
 fulldeck: deck.c dominion.o rngs.o
 	gcc -o fulldeck -g deck.c dominion.o rngs.o $(CFLAGS)
 
-scorefor: scorefor.c dominion.c rngs.o
-	gcc -o scorefor -g scorefor.c dominion.o rngs.o $(CFLAGS)
-
 supplycount: supplycount.c dominion.c rngs.o
 	gcc -o supplycount -g supplycount.c dominion.o rngs.o $(CFLAGS)
 

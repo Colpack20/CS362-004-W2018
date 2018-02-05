@@ -6,29 +6,26 @@
 char inputChar()
 {
     // TODO: rewrite this function
-	
-	//char a = rand() % 26;
-	//char randomletter = ' ' + (random() % 94);
+
 	int num = rand() % 9 + 1;
 	printf("num is %d ", num);
-	if (num == 1)//91
+	if (num == 1)
 		return '[';
-	//printf("character is %c ", a);
-    if (num == 2)//40
+    if (num == 2)
 		return '(';
-	if (num == 3)//123
+	if (num == 3)
 		return '{';
-	if (num == 4)//32
+	if (num == 4)
 		return ' ';
-	if (num == 5)//97
+	if (num == 5)
 		return 'a';
-	if (num == 6)//120
+	if (num == 6)
 		return 'x';
-	if (num == 7)//125
+	if (num == 7)
 		return '}';
-	if (num == 8)//41
+	if (num == 8)
 		return ')';
-	if (num == 9)//93
+	if (num == 9)
 		return ']';
 	
 }
@@ -37,8 +34,6 @@ char *inputString()
 {
     // TODO: rewrite this function
 	char input[6];
-	//int num = rand() % 5 + 1;
-	//int num = rand() % 16;
 	int num;
 	int i;
 	char randomletter;
@@ -56,20 +51,6 @@ char *inputString()
 			randomletter = 't';
 		input[i] = randomletter;
 	}
-	printf("input is %s ", input);
-	/*printf("num is %d ", num);
-	memset(input, '\0', sizeof(input));
-	if(num == 1)
-		return input[0] = 'r';//114
-	if(num == 2)
-		return input[1] = 'e';//101
-	if(num == 3)
-		return input[2] = 's';//115
-	if(num == 4)
-		return input[3] = 'e';//101
-	if(num == 5)
-		return input[4] = 't';//116
-	//input[5] = '\0';*/
     return input;
 }
 

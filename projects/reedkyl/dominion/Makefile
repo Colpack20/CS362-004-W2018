@@ -107,6 +107,8 @@ unittestresults.out: unittest1.c unittest2.c unittest3.c unittest4.c cardtest1.c
 	cardtest4 >> unittestresults.out
 	echo "council_room" >> unittestresults.out
 	gcov -abcfu dominion.c | sed -n '/cRoomfunction/{n;p; n;p; n;p; n;p}' >> unittestresults.out
+	
+	cat dominion.c.gcov >> unittestresult.out	
 
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
